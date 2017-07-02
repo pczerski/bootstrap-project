@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    #main-header #navigation {
+        text-align: right;
+    }
+    
+    #main-header a {
+        color: #0ed8d6;
+    }
+}

@@ -1,3 +1,329 @@
 body {
-    
+    font-family: 'Roboto Slab', serif;
+    //font-family: 'Droid Serif', serif;
+    //color: #777777;
+}
+
+body h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    text-align: center;
+}
+
+body h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+body h2,
+h4 {
+    font-family: 'Droid Serif', serif;
+    font-style: italic;
+}
+
+#services h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#services h4,
+#portfolio h4,
+#team h4,
+#contact h4 {
+    font-size: 16px;
+    color: #777777;
+}
+
+#title h1,
+#title h2,
+#contact h1,
+#contact h4 {
+    color: white;
+}
+
+#title h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#main-header {
+    position: relative;
+}
+
+#main-header a {
+    color: white;
+    transition: all .5s;
+}
+
+#main-header a:hover {
+    color: #0ed8d6;
+}
+
+#main-header nav {
+    background-color: transparent;
+    /*  Potrzebne do wywalenia linii na dole nawigacji  */
+    border: none;
+}
+
+.navbar-right {
+    padding-right: 30px;
+}
+
+.navbar-header .navbar-brand {
+    padding-left: 45px;
+}
+
+.klasa {
+    background-color: white;
+}
+
+#main-header .navbar-toggle .icon-bar {
+    background-color: #0ed8d6;
+}
+
+#main-header {
+    //position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header/pictures_on_the_wall.jpg);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#title {
+    position: absolute;
+    /*  Musi być podany rozmiar, bo inaczej się nie wypozycjonuje  */
+    width: 720px;
+    height: 210px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+header .btn {
+    height: 50px;
+    width: 150px;
+    background-color: #0ed8d6;
+}
+
+#services,
+#portfolio,
+#team,
+#contact {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#services {
+    //text-align: center;
+}
+
+#services .icon-box {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #0ed8d6;
+    border-radius: 50%;
+    transition: all .8s;
+}
+
+#services .icon-box:hover {
+    background-color: white;
+    border: 2px solid #0ed8d6;
+    transform: rotate(360deg);
+    transition: all .8s;
+}
+
+#services .fa:hover {
+    color: #0ed8d6;
+}
+
+#portfolio {
+    background-color: #f7f7f7;
+}
+
+.img-container {
+    //width: 350px;
+    height: 250px;
+    transition: all 0.7s;
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+    transition: all 0.7s;
+}
+#image-1, #image-2, #image-3, #image-4, #image-5, #image-6, .image-mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;     
+}
+
+.image-box {
+    background-color: white;
+    padding-bottom: 15px;
+    /*  Aby powiększało sie wewnątrz boxa  */
+    overflow: hidden;
+}
+
+.image-mask:hover {
+    background-color: #0ed8d6;
+    opacity: .7;
+}
+
+/*.fa-plus musi być zagnieżdżone w innym divie, #image-1*/
+#image-1:hover .fa, #image-2:hover .fa, #image-3:hover .fa, #image-4:hover .fa, #image-5:hover .fa, #image-6:hover .fa {
+    opacity: 1;
+    transition: all .7s;
+}
+
+#portfolio .fa-plus {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    opacity: 0;
+}
+
+#image-1 {
+    background-image: url(../img/portfolio/chestnut_on_bracket.jpg);
+}
+
+#image-2 {
+    background-image: url(../img/portfolio/typing_on_laptop.jpg);
+}
+
+#image-3 {
+    background-image: url(../img/portfolio/child_with_blue_paint.jpg);
+}
+
+#image-4 {
+    background-image: url(../img/portfolio/chaotic_paint.jpg);
+}
+
+#image-5 {
+    background-image: url(../img/portfolio/house_with_blue_doors.jpg);
+}
+
+#image-6 {
+    background-image: url(../img/portfolio/box_of_cookies.jpg);
+}
+
+#team {
+    text-align: center;
+}
+
+#team img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+#team .icon-box {
+    position: relative;
+    display: inline-block;
+    background-color: #333333;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all, 0.5s;
+}
+
+#team .icon-box:hover {
+    background-color: #0ed8d6;
+    transition: all 0.5s;
+}
+
+#team .fa {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*  Wycentrowane w pionie przez fa-fw  */
+    height: 28px;
+}
+
+#contact {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/footer/world-map.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#contact {
+    text-align: center;
+}
+
+#input-container {
+    //position: relative;
+    margin-bottom: 30px;
+}
+
+#contact input {
+    height: 42px;
+    //position: absolute;
+/*
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+*/
+}
+
+#contact button {
+    background-color: #0ed8d6;
+    color: white;
+    height: 50px;
+    width: 150px;    
+}
+
+footer {
+    line-height: 80px;
+    text-align: center;
+}
+
+.icon-box {
+    top: 22px;
+}
+
+footer .icon-box {
+    position: relative;
+    display: inline-block;
+    background-color: #333333;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: all, 0.5s;
+}
+
+footer .icon-box:hover {
+    background-color: #0ed8d6;
+}
+
+footer .fa {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*  Wycentrowane w pionie przez fa-fw  */
+    height: 28px;
 }
