@@ -2,15 +2,22 @@
 
 $(document).ready(function () {
     $(window).scroll();
+
+    $('#scroll-to-top').click(function () { // When arrow is clicked
+        $('body,html').animate({
+            scrollTop: 0 // Scroll to top of body
+        }, 500);
+    });
 });
 
 // Wyrzucamy definicję funkcji na zewnątrz jQuery
 $(window).scroll(function () {
     changeMenu();
+    scrollToTop();
 });
 
 var root = $('html, body');
-$('a[href^="#"]').click(function(e) {
+$('a[href^="#"]').click(function (e) {
     e.preventDefault();
     var href = $(this).attr('href');
     root.animate({
@@ -21,11 +28,21 @@ $('a[href^="#"]').click(function(e) {
 function changeMenu() {
     var navHeight = $('.navbar').height();
     var currentPosition = $(window).scrollTop();
-    
+
     if ($(window).scrollTop() > navHeight) {
         $('.navbar').addClass('menu-class');
-        $('.navbar').css({transition: 'all .5s'});
+        $('.navbar').css({
+            transition: 'all .5s'
+        });
     } else {
         $('.navbar').removeClass('menu-class');
+    }
+};
+
+function scrollToTop() {
+    if ($(window).scrollTop() >= 50) { // If page is scrolled more than 50px
+        $('#scroll-to-top').fadeIn(200); // Fade in the arrow
+    } else {
+        $('#scroll-to-top').fadeOut(200); // Else fade out the arrow
     }
 };

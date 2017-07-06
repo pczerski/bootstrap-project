@@ -78,6 +78,70 @@ body h4 {
     background-size: cover;
 }
 
+.header-parallax { 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header/pictures_on_the_wall.jpg);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#title {
+    position: absolute;
+    /*  Musi być podany rozmiar, bo inaczej się nie wypozycjonuje  */
+    width: 720px;
+    height: 210px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+body .btn {
+    height: 50px;
+    width: 150px;
+    background-color: #0ed8d6;
+}
+
+/* Scroll to top button */
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#scroll-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    transition: all 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#scroll-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+/* Menu */
 #main-header a {
     color: white;
     transition: all .5s;
@@ -87,19 +151,24 @@ body h4 {
     color: #0ed8d6;
 }
 
+#main-header .menu-class a {
+    color: #0ed8d6;
+}
+
+#main-header .menu-class a:hover {
+    color: white;
+}
+
 #main-header nav {
     background-color: transparent;
     /*  Potrzebne do wywalenia linii na dole nawigacji  */
     border: none;
 }
 
-.header-parallax { 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header/pictures_on_the_wall.jpg);
-    height: 100%; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#main-header .menu-class { 
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    z-index: 10;
 }
 
 .navbar-fixed-top {
@@ -122,25 +191,6 @@ ul {
     text-align: right;
 }
 
-#main-header .menu-class { 
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    z-index: 10;
-}
-
-#main-header .menu-class a {
-    color: #0ed8d6;
-}
-
-#main-header a {
-    color: white;
-    font-weight: 400;
-}
-
-#main-header a:hover {
-    color: #0ed8d6;
-}
-
 #main-header .icon-bar {
     background-color: #0ed8d6;
 }
@@ -155,25 +205,6 @@ ul {
 
 #main-header .navbar-toggle:hover .icon-bar {
     background-color: white;
-}
-
-#title {
-    position: absolute;
-    /*  Musi być podany rozmiar, bo inaczej się nie wypozycjonuje  */
-    width: 720px;
-    height: 210px;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-body .btn {
-    height: 50px;
-    width: 150px;
-    background-color: #0ed8d6;
 }
 
 /* SERVICES */
