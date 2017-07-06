@@ -1,16 +1,25 @@
-body {
+/* WSPÓLNE */
+
+body p {
     font-family: 'Roboto Slab', serif;
-    //font-family: 'Droid Serif', serif;
-    //color: #777777;
+    font-size: 16px;
+    color: #777777;
 }
 
 body h1,
 h2,
 h3,
-h4 {
+h4,
+.btn {
     font-family: 'Montserrat', sans-serif;
     color: #333333;
-    text-align: center;
+}
+
+body .btn {
+    font-size: 14px;
+    font-weight: bold;
+    height: 50px;
+    width: 150px;       
 }
 
 body h1 {
@@ -24,17 +33,26 @@ h4 {
     font-style: italic;
 }
 
+body h4 {
+    font-size: 16px;
+    color: #777777;
+}
+
+#services, #portfolio, #team, #contact {
+    text-align: center;
+}
+
+#services,
+#portfolio,
+#team,
+#contact {
+    padding-top: 80px;
+    padding-bottom: 130px;
+}
+
 #services h3 {
     font-size: 18px;
     font-weight: 700;
-}
-
-#services h4,
-#portfolio h4,
-#team h4,
-#contact h4 {
-    font-size: 16px;
-    color: #777777;
 }
 
 #title h1,
@@ -49,8 +67,15 @@ h4 {
     font-weight: 700;
 }
 
+/* HEADER */
 #main-header {
-    position: relative;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 #main-header a {
@@ -68,32 +93,68 @@ h4 {
     border: none;
 }
 
-.navbar-right {
-    padding-right: 30px;
+.header-parallax { 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header/pictures_on_the_wall.jpg);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.navbar-header .navbar-brand {
-    padding-left: 45px;
+.navbar-fixed-top {
+    background-color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
 }
 
-.klasa {
-    background-color: white;
+li {
+    right: 30px;
+    margin-left: 25px;
 }
 
-#main-header .navbar-toggle .icon-bar {
+.navbar-toggle {
+    right: 30px;
+}
+
+ul {
+    text-align: right;
+}
+
+#main-header .menu-class { 
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    z-index: 10;
+}
+
+#main-header .menu-class a {
+    color: #0ed8d6;
+}
+
+#main-header a {
+    color: white;
+    font-weight: 400;
+}
+
+#main-header a:hover {
+    color: #0ed8d6;
+}
+
+#main-header .icon-bar {
     background-color: #0ed8d6;
 }
 
-#main-header {
-    //position: absolute;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/header/pictures_on_the_wall.jpg);
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    top: 0;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+#main-header .navbar-toggle {
+    background-color: transparent;
+}
+
+#main-header .navbar-toggle:hover {
+    background-color: #0ed8d6;
+}
+
+#main-header .navbar-toggle:hover .icon-bar {
+    background-color: white;
 }
 
 #title {
@@ -109,24 +170,13 @@ h4 {
     text-align: center;
 }
 
-header .btn {
+body .btn {
     height: 50px;
     width: 150px;
     background-color: #0ed8d6;
 }
 
-#services,
-#portfolio,
-#team,
-#contact {
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-#services {
-    //text-align: center;
-}
-
+/* SERVICES */
 #services .icon-box {
     margin: auto;
     width: 60px;
@@ -141,15 +191,17 @@ header .btn {
 
 #services .icon-box:hover {
     background-color: white;
-    border: 2px solid #0ed8d6;
+    //border: 2px solid #0ed8d6;
     transform: rotate(360deg);
     transition: all .8s;
 }
 
-#services .fa:hover {
+/* Pozwala zienić kolor fa po kliknięciu w icon-box*/
+#services .icon-box:hover .fa {
     color: #0ed8d6;
 }
 
+/* PORTFOLIO */
 #portfolio {
     background-color: #f7f7f7;
 }
@@ -224,10 +276,6 @@ header .btn {
     background-image: url(../img/portfolio/box_of_cookies.jpg);
 }
 
-#team {
-    text-align: center;
-}
-
 #team img {
     width: 250px;
     border-radius: 50%;
@@ -236,7 +284,7 @@ header .btn {
 #team .icon-box {
     position: relative;
     display: inline-block;
-    background-color: #333333;
+    background-color: #222222;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -259,71 +307,56 @@ header .btn {
     height: 28px;
 }
 
-#contact {
+#team .col-xs-12 {
+    padding-bottom: 20px;
+}
+
+#team-text {
+    margin-top: 60px;
+}
+
+/* CONTACT */
+.contact-parallax { 
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/footer/world-map.jpg);
-    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center center;
     background-size: cover;
 }
 
-#contact {
-    text-align: center;
-}
-
-#input-container {
-    //position: relative;
-    margin-bottom: 30px;
-}
-
 #contact input {
-    height: 42px;
-    //position: absolute;
-/*
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-*/
+    height: 55px;
+    margin-bottom: 25px;
 }
 
-#contact button {
-    background-color: #0ed8d6;
-    color: white;
-    height: 50px;
-    width: 150px;    
-}
-
-footer {
-    line-height: 80px;
+footer .row {
+    display: flex;
+    align-items: center;
+    //line-height: 80px;
+    height: 80px;
     text-align: center;
 }
 
 .icon-box {
-    top: 22px;
+    //top: 22px;
 }
 
+/* FOOTER */
 footer .icon-box {
-    position: relative;
     display: inline-block;
-    background-color: #333333;
-    width: 45px;
-    height: 45px;
+    background-color: #222222;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
     border-radius: 50%;
-    transition: all, 0.5s;
+    transition: all .8s;
 }
 
 footer .icon-box:hover {
     background-color: #0ed8d6;
 }
 
-footer .fa {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /*  Wycentrowane w pionie przez fa-fw  */
-    height: 28px;
-}
+
