@@ -1,6 +1,12 @@
 @media screen and (max-width: 768px) {
+    #myNavbar ul, .navbar-header {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    #main-header .menu-class {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
     footer .row {
-/*    Bez tego elementy się nie złożą przy włączonym flexie    */
+        /*    Bez tego elementy się nie złożą przy włączonym flexie    */
         display: initial;
     }
 }

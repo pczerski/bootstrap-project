@@ -1,5 +1,6 @@
 'use strict';
 
+// Wyrzucamy definicję funkcji na zewnątrz jQuery
 $(document).ready(function () {
     $(window).scroll();
 
@@ -31,11 +32,11 @@ function changeMenu() {
 
     if ($(window).scrollTop() > navHeight) {
         $('.navbar').addClass('menu-class');
-        $('.navbar').css({
-            transition: 'all .5s'
-        });
+        //$('#myNavbar ul').css({"backgroundColor": "rgba(0, 0, 0, 0.6)"});
+        $('.navbar').css({transition: 'all .5s'});        
     } else {
         $('.navbar').removeClass('menu-class');
+        //$('#myNavbar ul').css({"backgroundColor": "rgba(0, 0, 0, 0)"});
     }
 };
 
